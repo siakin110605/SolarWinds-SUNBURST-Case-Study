@@ -1,7 +1,5 @@
 # SolarWinds SUNBURST: Supply Chain Attack Case Study
 
-<img src="images/cover.png" alt="Cover" width="360"/>
-
 An in-depth technical case study of the 2020 SolarWinds/SUNBURST supply chain
 compromise, one of the most sophisticated nation-state cyber operations ever
 documented, covering the full attack lifecycle, its mapping to MITRE ATT&CK,
