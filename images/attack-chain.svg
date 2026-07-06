@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
   <rect width="1000" height="620" fill="#12131a"/>
-  <text x="40" y="50" fill="#ffffff" font-size="28" font-weight="700">SUNBURST — Attack Chain (MITRE ATT&amp;CK)</text>
+  <text x="40" y="50" fill="#ffffff" font-size="28" font-weight="700">SUNBURST: Attack Chain (MITRE ATT&amp;CK)</text>
   <text x="40" y="76" fill="#8a93a6" font-size="14">Six stages, from build-environment compromise to data exfiltration</text>
 
   <!-- connecting line -->
@@ -81,8 +81,8 @@
     <text x="78" y="390" fill="#b7bccb" font-size="12">Stealth &amp; communication stages</text>
   </g>
 
-  <text x="40" y="440" fill="#8a93a6" font-size="13">Bonus finding: a separate, unrelated malware family — </text>
-  <text x="415" y="440" fill="#ffffff" font-size="13" font-weight="600">SUPERNOVA</text>
-  <text x="500" y="440" fill="#8a93a6" font-size="13"> — was found in the same Orion</text>
+  <text x="40" y="440" fill="#8a93a6" font-size="13">Bonus finding: a separate, unrelated malware family called </text>
+  <text x="490" y="440" fill="#ffffff" font-size="13" font-weight="600">SUPERNOVA</text>
+  <text x="575" y="440" fill="#8a93a6" font-size="13">was found in the same Orion</text>
   <text x="40" y="460" fill="#8a93a6" font-size="13">DLL but was unrelated to SUNBURST / APT29, installed by a different actor exploiting the same product.</text>
 </svg>

@@ -1,10 +1,10 @@
-# SolarWinds SUNBURST — Supply Chain Attack Case Study
+# SolarWinds SUNBURST: Supply Chain Attack Case Study
 
 <img src="images/cover.png" alt="Cover" width="360"/>
 
 An in-depth technical case study of the 2020 SolarWinds/SUNBURST supply chain
-compromise — one of the most sophisticated nation-state cyber operations ever
-documented — covering the full attack lifecycle, its mapping to MITRE ATT&CK,
+compromise, one of the most sophisticated nation-state cyber operations ever
+documented, covering the full attack lifecycle, its mapping to MITRE ATT&CK,
 and the detection failures and lessons it exposed for supply chain security.
 
 ## Table of Contents
@@ -20,7 +20,7 @@ and the detection failures and lessons it exposed for supply chain security.
 
 ## Executive Summary
 
-In December 2020, security firm FireEye (now Mandiant) uncovered SUNBURST — a
+In December 2020, security firm FireEye (now Mandiant) uncovered SUNBURST, a
 backdoor secretly embedded in digitally-signed updates of SolarWinds' Orion
 IT-monitoring platform. Attackers had compromised SolarWinds' internal build
 environment as early as September 2019 and used it to trojanize Orion updates
@@ -29,16 +29,16 @@ organizations**, including U.S. federal agencies (Treasury, Commerce, Homeland
 Security, State, DOJ, parts of the Pentagon) and major technology companies
 (Microsoft, Intel, Cisco, Deloitte).
 
-Of those 18,000, the attackers — attributed with high confidence to **APT29
-("Cozy Bear")**, linked to Russia's SVR — selected roughly **100 high-value
+Of those 18,000, the attackers, attributed with high confidence to **APT29
+("Cozy Bear")** and linked to Russia's SVR, selected roughly **100 high-value
 targets** for deeper compromise: lateral movement, credential theft via a
 "Golden SAML" technique, and exfiltration of sensitive data and source code.
 The operation went undetected for over **14 months**, largely because the
 malicious code arrived through a channel every security tool was designed to
-trust: a legitimately signed vendor update.
+trust, a legitimately signed vendor update.
 
 The central lesson of this case study is that supply chain attacks are an
-inherent vulnerability of modern digital ecosystems — compromising a single
+inherent vulnerability of modern digital ecosystems. Compromising a single
 trusted vendor is enough to expose thousands of otherwise well-defended
 organizations. Defending against this class of attack requires a shift from
 implicit trust in vendors toward continuous verification, transparency, and
@@ -61,9 +61,9 @@ shared responsibility across the supply chain.
 
 ## Attack Overview
 
-SolarWinds Corporation's **Orion** platform — used by roughly 33,000 customers,
-including government agencies and Fortune 500 companies, for network
-monitoring — runs with elevated privileges across an organization's servers,
+SolarWinds Corporation's **Orion** platform, used by roughly 33,000 customers
+including government agencies and Fortune 500 companies for network
+monitoring, runs with elevated privileges across an organization's servers,
 network devices, and applications. That combination of broad market
 penetration and high privilege made it an ideal supply chain target.
 
@@ -71,7 +71,7 @@ A structural weakness enabled the initial breach: SolarWinds did not separate
 authentication between its IT network and its software development network,
 violating the kind of segmentation required by standards like NERC CIP-005-6.
 Once inside the development environment, the attackers injected SUNBURST
-during the Orion **build process itself** — modifying source before the
+during the Orion **build process itself**, modifying source before the
 compiler read it, so no trace was left in the source repository. Security
 researchers at Kaspersky later found code similarities between SUNBURST and
 the previously known **Kazuar** backdoor.
@@ -104,11 +104,11 @@ Microsoft 365 environments.
 ### Collection & exfiltration
 
 For the ~100 deep-dive targets, attackers exfiltrated data over the existing
-C2 channel — including thousands of emails from the U.S. Departments of
+C2 channel, including thousands of emails from the U.S. Departments of
 Justice, Treasury, and Homeland Security, and source code/certificates from
 Microsoft.
 
-A separate, unrelated piece of malware — **SUPERNOVA** — was later found in
+A separate, unrelated piece of malware called **SUPERNOVA** was later found in
 the same Orion DLL, installed by a different threat actor exploiting the same
 product; it is not part of the SUNBURST/APT29 campaign.
 
@@ -138,19 +138,19 @@ product; it is not part of the SUNBURST/APT29 campaign.
 - Average financial cost: **~$12.3M** (≈11% of annual revenue) per affected company
 - **91%** of organizations reassessed their supply chain security posture; **42%** implemented immediate improvements
 - Regulatory fallout included **Executive Order 14028** (May 2021) on improving national cybersecurity
-- Attribution to APT29 was announced jointly by the **FBI, CISA, NSA, and ODNI** in April 2021 — but no criminal charges followed, and SolarWinds stated it never independently verified the attackers' identity, underscoring how difficult attribution remains even in well-documented incidents
+- Attribution to APT29 was announced jointly by the **FBI, CISA, NSA, and ODNI** in April 2021, but no criminal charges followed, and SolarWinds stated it never independently verified the attackers' identity, underscoring how difficult attribution remains even in well-documented incidents
 
 ## Lessons Learned
 
 **Why detection failed for 14 months.** The malware arrived through a channel
-every security control was built to trust — a signed vendor update — and
-combined that with genuine operational discipline: dormancy periods,
+every security control was built to trust: a signed vendor update. It
+combined that with genuine operational discipline, including dormancy periods,
 traffic disguised as legitimate telemetry, and the deliberate use of native
 system tools (PowerShell, valid credentials) instead of custom malware once
 inside a target network.
 
 **The "solarwinds123" password.** A weak password, publicly exposed on GitHub
-for over a year, became a symbol of a deeper cultural problem — regardless of
+for over a year, became a symbol of a deeper cultural problem. Regardless of
 whether it was an actual attack vector, SolarWinds' initial response (blaming
 an intern) was widely criticized rather than treated as an opportunity for
 transparent self-assessment.
@@ -163,12 +163,12 @@ proactive threat hunting, SIEM coverage, Active Directory monitoring, and DLP
 would have narrowed the window of exposure.
 
 **The bigger picture.** A single trusted vendor's compromise can expose
-thousands of otherwise well-secured organizations — no organization is more
+thousands of otherwise well-secured organizations. No organization is more
 secure than the weakest link in its supply chain. Frameworks like Zero Trust
 Architecture, continuous verification, and cross-industry threat intelligence
 sharing (as recommended by ENISA) are the direction the industry has moved
-since. That the pattern repeated in the **europa.eu / Trivy compromise
-(March 2026)**, exposing data from at least 30 European organizations,
+since. The pattern repeated in the **europa.eu / Trivy compromise
+(March 2026)**, exposing data from at least 30 European organizations, which
 confirms this remains a live, evolving threat rather than a solved problem.
 
 ## Report & References
@@ -180,6 +180,6 @@ Full source list: [`references.md`](references.md).
 
 ## License
 
-All Rights Reserved — see [LICENSE](LICENSE). Shared publicly for portfolio
+All Rights Reserved, see [LICENSE](LICENSE). Shared publicly for portfolio
 and review purposes; reuse or redistribution requires prior written
 permission from the author.

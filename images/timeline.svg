@@ -1,7 +1,7 @@
 <svg viewBox="0 0 1000 900" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
   <rect width="1000" height="900" fill="#12131a"/>
 
-  <text x="40" y="55" fill="#ffffff" font-size="30" font-weight="700">SolarWinds SUNBURST — Attack Timeline</text>
+  <text x="40" y="55" fill="#ffffff" font-size="30" font-weight="700">SolarWinds SUNBURST: Attack Timeline</text>
   <text x="40" y="82" fill="#8a93a6" font-size="15">September 2019 – December 2020</text>
 
   <line x1="60" y1="120" x2="60" y2="850" stroke="#3a3f52" stroke-width="3"/>
