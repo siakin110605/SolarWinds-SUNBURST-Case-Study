@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1000 900" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1000" height="900" fill="#12131a"/>
+
+  <text x="40" y="55" fill="#ffffff" font-size="30" font-weight="700">SolarWinds SUNBURST — Attack Timeline</text>
+  <text x="40" y="82" fill="#8a93a6" font-size="15">September 2019 – December 2020</text>
+
+  <line x1="60" y1="120" x2="60" y2="850" stroke="#3a3f52" stroke-width="3"/>
+
+  <!-- Event template: dot + date + title + desc -->
+  <g>
+    <circle cx="60" cy="140" r="9" fill="#e94560"/>
+    <text x="90" y="135" fill="#e94560" font-size="15" font-weight="700">Sept 2019</text>
+    <text x="90" y="158" fill="#ffffff" font-size="17" font-weight="600">Initial Access</text>
+    <text x="90" y="180" fill="#b7bccb" font-size="13">Attackers compromise SolarWinds' internal build environment</text>
+    <text x="90" y="198" fill="#6f7690" font-size="12">MITRE ATT&amp;CK: T1195.002</text>
+  </g>
+
+  <g>
+    <circle cx="60" cy="235" r="9" fill="#e94560"/>
+    <text x="90" y="230" fill="#e94560" font-size="15" font-weight="700">Oct 2019</text>
+    <text x="90" y="253" fill="#ffffff" font-size="17" font-weight="600">Test Injection</text>
+    <text x="90" y="275" fill="#b7bccb" font-size="13">Benign test code injected into the Orion build to confirm the technique goes undetected</text>
+  </g>
+
+  <g>
+    <circle cx="60" cy="330" r="9" fill="#e94560"/>
+    <text x="90" y="325" fill="#e94560" font-size="15" font-weight="700">Feb 2020</text>
+    <text x="90" y="348" fill="#ffffff" font-size="17" font-weight="600">SUNBURST Deployed</text>
+    <text x="90" y="370" fill="#b7bccb" font-size="13">SUNBURST backdoor embedded in SolarWinds.Orion.Core.BusinessLayer.dll</text>
+    <text x="90" y="388" fill="#6f7690" font-size="12">MITRE ATT&amp;CK: T1553.002, T1059</text>
+  </g>
+
+  <g>
+    <circle cx="60" cy="425" r="9" fill="#f5a623"/>
+    <text x="90" y="420" fill="#f5a623" font-size="15" font-weight="700">Mar – Jun 2020</text>
+    <text x="90" y="443" fill="#ffffff" font-size="17" font-weight="600">Trojanized Distribution</text>
+    <text x="90" y="465" fill="#b7bccb" font-size="13">Digitally-signed, malicious Orion updates shipped to ~18,000 organizations</text>
+  </g>
+
+  <g>
+    <circle cx="60" cy="520" r="9" fill="#f5a623"/>
+    <text x="90" y="515" fill="#f5a623" font-size="15" font-weight="700">Mar – Dec 2020</text>
+    <text x="90" y="538" fill="#ffffff" font-size="17" font-weight="600">Active Exploitation</text>
+    <text x="90" y="560" fill="#b7bccb" font-size="13">~100 high-value targets selected for deeper compromise: dormancy, C2, lateral movement, data theft</text>
+    <text x="90" y="578" fill="#6f7690" font-size="12">MITRE ATT&amp;CK: T1027 · T1071 · T1021 · T1078 · T1041</text>
+  </g>
+
+  <g>
+    <circle cx="60" cy="640" r="9" fill="#2ecc71"/>
+    <text x="90" y="635" fill="#2ecc71" font-size="15" font-weight="700">Dec 8, 2020</text>
+    <text x="90" y="658" fill="#ffffff" font-size="17" font-weight="600">FireEye Discloses Its Own Breach</text>
+    <text x="90" y="680" fill="#b7bccb" font-size="13">FireEye reports a nation-state actor stole its Red Team tools</text>
+  </g>
+
+  <g>
+    <circle cx="60" cy="725" r="9" fill="#2ecc71"/>
+    <text x="90" y="720" fill="#2ecc71" font-size="15" font-weight="700">Dec 13, 2020</text>
+    <text x="90" y="743" fill="#ffffff" font-size="17" font-weight="600">SUNBURST Publicly Linked</text>
+    <text x="90" y="765" fill="#b7bccb" font-size="13">FireEye connects its breach to the trojanized Orion supply chain compromise</text>
+  </g>
+
+  <g>
+    <circle cx="60" cy="810" r="9" fill="#2ecc71"/>
+    <text x="90" y="805" fill="#2ecc71" font-size="15" font-weight="700">Dec 15, 2020 →</text>
+    <text x="90" y="828" fill="#ffffff" font-size="17" font-weight="600">Wider Impact Confirmed</text>
+    <text x="90" y="850" fill="#b7bccb" font-size="13">Multiple US federal agencies confirmed compromised; APT29/Cozy Bear attribution follows in 2021</text>
+  </g>
+</svg>
